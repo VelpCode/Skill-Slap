@@ -26,3 +26,11 @@ function outsideClickClose(event) {
         toggleModal();
     }
 }
+
+
+document.getElementById("addSkillForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const skillName = document.getElementById('skillName').value;
+    const skillDescription = document.getElementById('skillDescription').value;
+})
