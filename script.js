@@ -40,7 +40,7 @@ function addSkill() {
         newSkill.innerHTML = `
             <h2 class="font-semibold text-xl mb-2">${skillName}</h2>
             <p>${skillDescription}</p>
-            <button class="mt-4 px-4 py-2 bg-blue-500 text-white rounded-md">Track Skill</button>
+            <button class="mt-4 px-4 py-2 bg-[#222222] text-white rounded-md">Track Skill</button>
         `;
 
         // Append the new skill card to the flex container
@@ -56,4 +56,21 @@ function addSkill() {
     } else {
         alert("Please fill out both fields before saving.");
     }
+}
+
+function removeSkill() {
+
+    const skillsContainer = document.querySelector(".skills-container");
+
+    if (skillsContainer.children.length > 0) {
+        const lastSkill = skillsContainer.lastElementChild;
+
+        lastSkill.classList.add('fade-out');
+
+        setTimeout(function() {
+            skillsContainer.removeChild(lastSkill);
+        }, 500);
+    }
+
+
 }

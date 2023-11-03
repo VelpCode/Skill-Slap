@@ -17,11 +17,11 @@
 
    <!-- Title -->
    <div class="mb-8">
-       <h1 class="text-3xl font-bold">Your Skills</h1>
+       <h1 class="text-3xl font-bold">Your <span class = "text-violet-400">Skills</span></h1>
    </div>
 
    <!-- Skill Cards -->
-   <div class="flex flex-wrap justify-around">
+   <div class="flex flex-wrap justify-around skills-container">
        <div class="bg-white p-4 rounded-md shadow h-48">
            <h2 class="font-semibold text-xl mb-2">Yoga</h2>
            <p>Learn about hosting built for scale and reliability.</p>
@@ -50,7 +50,7 @@
            Add Skill
        </button>
 
-       <button class="flex items-center p-4 bg-red-500 text-white rounded-full shadow-md transform transition duration-300 hover:scale-110">
+       <button class="flex items-center p-4 bg-red-500 text-white rounded-full shadow-md transform transition duration-300 hover:scale-110" onclick = "removeSkill()">
            <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
            </svg>
