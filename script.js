@@ -27,10 +27,33 @@ function outsideClickClose(event) {
     }
 }
 
+function addSkill() {
+    // Get the values from the input fields
+    const skillName = document.getElementById('inputSkillName').value;
+    const skillDescription = document.getElementById('inputSkillDescription').value;
 
-document.getElementById("addSkillForm").addEventListener("submit", function(event) {
-    event.preventDefault();
+    // Check if the input fields are not empty
+    if (skillName && skillDescription) {
+        // Create a new skill card
+        const newSkill = document.createElement('div');
+        newSkill.className = 'flex-none bg-white p-4 rounded-md shadow mx-4 my- h-50 w-50 ';
+        newSkill.innerHTML = `
+            <h2 class="font-semibold text-xl mb-2">${skillName}</h2>
+            <p>${skillDescription}</p>
+            <button class="mt-4 px-4 py-2 bg-blue-500 text-white rounded-md">Track Skill</button>
+        `;
 
-    const skillName = document.getElementById('skillName').value;
-    const skillDescription = document.getElementById('skillDescription').value;
-})
+        // Append the new skill card to the flex container
+        const skillContainer = document.querySelector('.flex.flex-wrap');
+        skillContainer.appendChild(newSkill);
+
+        // Reset the input fields
+        document.getElementById('inputSkillName').value = '';
+        document.getElementById('inputSkillDescription').value = '';
+
+        // Close the modal
+        toggleModal();
+    } else {
+        alert("Please fill out both fields before saving.");
+    }
+}
