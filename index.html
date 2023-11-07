@@ -24,27 +24,32 @@
         <span class = "text-indigo-500">Skills</span>
 
    </div>
-
    <!-- Skill Cards -->
    <div class="flex flex-wrap justify-around skills-container mt-20">
-       <div class="bg-white p-4 rounded-md shadow h-48">
+        
+       <div class="bg-white p-4 rounded-md shadow h-50">
            <h2 class="font-semibold text-xl mb-2">Yoga</h2>
-           <p>Building Yoga to keep my joints healthy.</p>
-           <button class="mt-4 px-4 py-2 bg-[#222222] text-white rounded-md transform transition duration-300 hover:scale-110">Track Skill</button>
+           <div class="text-neutral-400 text-xl max-w-[264px] mt-5 self-start">
+            Getting them stretches in every single day.
+          </div>
+           <button class="track-button mt-5 px-4 py-3 bg-[#222222] text-white text-base font-bold self-stretch whitespace-nowrap rounded-md transform transition duration-300 hover:scale-110" onclick = "window.location.href ='./track.html';">Track Skill</button>
       </div>
 
-       <div class="bg-white p-4 rounded-lg shadow">
-           <h2 class="font-semibold text-xl mb-2">Programming</h2>
-           <p>Learning how to program and build my own sites.</p>
-           <button class="mt-4 px-4 py-2 bg-[#222222] text-white rounded-md transform transition duration-300 hover:scale-110">Track Skill</button>
+      <div class="bg-white p-4 rounded-md shadow h-50">
+        <h2 class="font-semibold text-xl mb-2">Programming</h2>
+        <div class="text-neutral-400 text-xl max-w-[264px] mt-5 self-start">
+         Learning about programming so I can land a mil $ job.
        </div>
-
-       <div class="bg-white p-4 rounded-md shadow">
-           <h2 class="font-semibold text-xl mb-2">Learn Hindi</h2>
-           <p>Learning Hindi to translate languages at work.</p>
-           <button class="mt-4 px-4 py-2 bg-[#222222] text-white rounded-md transform transition duration-300 hover:scale-110">Track Skill</button>
-       </div>
+        <button class="track-button mt-5 px-4 py-3 bg-[#222222] text-white text-base font-bold self-stretch whitespace-nowrap rounded-md transform transition duration-300 hover:scale-110" onclick = "window.location.href ='./track.html';">Track Skill</button>
    </div>
+
+   <div class="bg-white p-4 rounded-md shadow h-50">
+    <h2 class="font-semibold text-xl mb-2">Beatboxing</h2>
+    <div class="text-neutral-400 text-xl max-w-[264px] mt-5 self-start">
+     Trying to make my mouth a dangerous instrument
+   </div>
+    <button class="track-button mt-5 px-4 py-3 bg-[#222222] text-white text-base font-bold self-stretch whitespace-nowrap rounded-md transform transition duration-300 hover:scale-110" onclick = "window.location.href ='./track.html';">Track Skill</button>
+</div>
 
    <!-- Action Buttons -->
    <div class="fixed bottom-10 right-10 space-y-4">
@@ -55,19 +60,13 @@
            Add Skill
        </button>
 
-       <button class="flex items-center p-4 bg-red-500 text-white rounded-full shadow-md transform transition duration-300 hover:scale-110" onclick = "removeSkill()">
+       <button class="flex items-center p-4 bg-[#222222] text-white rounded-full shadow-md transform transition duration-300 hover:scale-110" onclick = "removeSkill()">
            <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
            </svg>
            Delete Skill
        </button>
 
-       <button class="flex items-center p-4 bg-green-500 text-white rounded-full shadow-md">
-           <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7"></path>
-           </svg>
-           Mix Skills
-       </button>
    </div>
    <div id="addSkillModal" class="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-10 transform transition-all duration-300 ease-out scale-95 opacity-0 hidden"onclick="outsideClickClose(event)">
       <div class="bg-white p-8 rounded-lg w-96">

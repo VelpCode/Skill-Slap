@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel = "stylesheet" href = "dist/output.css">
+</head>
+<body>
+    <div class="bg-white flex flex-col px-20 rounded-3xl max-md:px-5">
+        <div
+          class="flex w-[716px] max-w-full flex-col ml-7 mt-24 mb-[520px] self-start max-md:my-10"
+        >
+          <div
+            class="text-indigo-500 text-5xl font-bold self-stretch whitespace-nowrap max-md:max-w-full max-md:text-4xl"
+          >
+            <span class="text-black">Yoga</span>
+            <span class="text-indigo-500">Progress</span>
+          </div>
+          <div
+            class="text-neutral-400 text-3xl self-stretch whitespace-nowrap mt-7 max-md:max-w-full"
+          >
+            6 hrs 42 minutes of Skill Time.
+          </div>
+          <div class="self-stretch mt-24 pr-2.5 max-md:max-w-full max-md:mt-10">
+            <div class="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
+              <div
+                class="flex flex-col items-stretch w-6/12 max-md:w-full max-md:ml-0"
+              >
+                <div
+                  class="border bg-indigo-500 flex w-full max-w-[337px] grow flex-col mx-auto pl-5 pr-1 pt-4 pb-9 rounded-lg border-solid border-indigo-500 max-md:mt-8 max-md:pl-5"
+                >
+                  <div
+                    class="self-stretch flex w-full items-start justify-between gap-5"
+                  >
+                    <div class="text-white text-2xl font-bold my-auto">
+                      Cat Stretches
+                    </div>
+                    <div id = "drag-one" class = "cursor-pointer">
+                    <img
+                      loading="lazy"
+                      srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/2da32693-6964-4115-84eb-e8e442503a6a?apiKey=fad1b05de9cb407d9fb50765d47dff85&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/2da32693-6964-4115-84eb-e8e442503a6a?apiKey=fad1b05de9cb407d9fb50765d47dff85&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/2da32693-6964-4115-84eb-e8e442503a6a?apiKey=fad1b05de9cb407d9fb50765d47dff85&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/2da32693-6964-4115-84eb-e8e442503a6a?apiKey=fad1b05de9cb407d9fb50765d47dff85&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/2da32693-6964-4115-84eb-e8e442503a6a?apiKey=fad1b05de9cb407d9fb50765d47dff85&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/2da32693-6964-4115-84eb-e8e442503a6a?apiKey=fad1b05de9cb407d9fb50765d47dff85&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/2da32693-6964-4115-84eb-e8e442503a6a?apiKey=fad1b05de9cb407d9fb50765d47dff85&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/2da32693-6964-4115-84eb-e8e442503a6a?apiKey=fad1b05de9cb407d9fb50765d47dff85&"
+                      class="aspect-[1.02] object-contain object-center w-[45px] overflow-hidden self-stretch max-w-full"
+                    />
+                    </div>
+                  </div>
+                  <div
+                    class="self-stretch flex items-start justify-between gap-1.5 mt-4"
+                  >
+                    <img
+                      loading="lazy"
+                      srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/101d1d54-982e-469a-a7f4-2bb39b2e4ff9?apiKey=fad1b05de9cb407d9fb50765d47dff85&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/101d1d54-982e-469a-a7f4-2bb39b2e4ff9?apiKey=fad1b05de9cb407d9fb50765d47dff85&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/101d1d54-982e-469a-a7f4-2bb39b2e4ff9?apiKey=fad1b05de9cb407d9fb50765d47dff85&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/101d1d54-982e-469a-a7f4-2bb39b2e4ff9?apiKey=fad1b05de9cb407d9fb50765d47dff85&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/101d1d54-982e-469a-a7f4-2bb39b2e4ff9?apiKey=fad1b05de9cb407d9fb50765d47dff85&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/101d1d54-982e-469a-a7f4-2bb39b2e4ff9?apiKey=fad1b05de9cb407d9fb50765d47dff85&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/101d1d54-982e-469a-a7f4-2bb39b2e4ff9?apiKey=fad1b05de9cb407d9fb50765d47dff85&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/101d1d54-982e-469a-a7f4-2bb39b2e4ff9?apiKey=fad1b05de9cb407d9fb50765d47dff85&"
+                      class="aspect-square object-contain object-center w-[30px] overflow-hidden self-stretch max-w-full"
+                    />
+                    <div
+                      class="text-white text-xl font-bold self-center whitespace-nowrap grow shrink basis-auto my-auto"
+                    >
+                      Completed
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex flex-col items-stretch w-6/12 ml-5 max-md:w-full max-md:ml-0"
+              >
+                <div
+                  class="border bg-rose-400 flex w-full max-w-[337px] grow flex-col mx-auto pl-5 pr-1 pt-4 pb-9 rounded-lg border-solid border-rose-400 max-md:mt-8 max-md:pl-5"
+                >
+                  <div
+                    class="self-stretch flex w-full items-start justify-between gap-5"
+                  >
+                    <div class="text-white text-2xl font-bold my-auto">
+                      Leg Extensions
+                    </div>
+                    <div id = "drag-two"class = "cursor-pointer">
+                    <img
+                      loading="lazy"
+                      srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/575cf4d9-5b72-4eef-b6f5-6c2f373f244f?apiKey=fad1b05de9cb407d9fb50765d47dff85&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/575cf4d9-5b72-4eef-b6f5-6c2f373f244f?apiKey=fad1b05de9cb407d9fb50765d47dff85&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/575cf4d9-5b72-4eef-b6f5-6c2f373f244f?apiKey=fad1b05de9cb407d9fb50765d47dff85&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/575cf4d9-5b72-4eef-b6f5-6c2f373f244f?apiKey=fad1b05de9cb407d9fb50765d47dff85&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/575cf4d9-5b72-4eef-b6f5-6c2f373f244f?apiKey=fad1b05de9cb407d9fb50765d47dff85&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/575cf4d9-5b72-4eef-b6f5-6c2f373f244f?apiKey=fad1b05de9cb407d9fb50765d47dff85&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/575cf4d9-5b72-4eef-b6f5-6c2f373f244f?apiKey=fad1b05de9cb407d9fb50765d47dff85&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/575cf4d9-5b72-4eef-b6f5-6c2f373f244f?apiKey=fad1b05de9cb407d9fb50765d47dff85&"
+                      class="aspect-[1.02] object-contain object-center w-[45px] overflow-hidden self-stretch max-w-full"
+                    />
+                    </div>
+                  </div>
+                  <div
+                    class="self-stretch flex items-start justify-between gap-1.5 mt-3.5"
+                  >
+                    <img
+                      loading="lazy"
+                      srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/cf8a5d70-014e-4e6a-bae6-675548dbe8ec?apiKey=fad1b05de9cb407d9fb50765d47dff85&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/cf8a5d70-014e-4e6a-bae6-675548dbe8ec?apiKey=fad1b05de9cb407d9fb50765d47dff85&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/cf8a5d70-014e-4e6a-bae6-675548dbe8ec?apiKey=fad1b05de9cb407d9fb50765d47dff85&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/cf8a5d70-014e-4e6a-bae6-675548dbe8ec?apiKey=fad1b05de9cb407d9fb50765d47dff85&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/cf8a5d70-014e-4e6a-bae6-675548dbe8ec?apiKey=fad1b05de9cb407d9fb50765d47dff85&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/cf8a5d70-014e-4e6a-bae6-675548dbe8ec?apiKey=fad1b05de9cb407d9fb50765d47dff85&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/cf8a5d70-014e-4e6a-bae6-675548dbe8ec?apiKey=fad1b05de9cb407d9fb50765d47dff85&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/cf8a5d70-014e-4e6a-bae6-675548dbe8ec?apiKey=fad1b05de9cb407d9fb50765d47dff85&"
+                      class="aspect-square object-contain object-center w-[30px] overflow-hidden self-stretch max-w-full"
+                    />
+                    <div
+                      class="text-white text-xl font-bold self-center whitespace-nowrap grow shrink basis-auto my-auto"
+                    >
+                      Completed
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="fixed bottom-10 right-10 space-y-4">
+            <button class="flex items-center p-4 bg-indigo-500 text-white rounded-full shadow-md transform transition duration-300 hover:scale-110" onclick ="toggleModal()">
+                <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4v16m8-8H4"></path>
+                </svg>
+                Add Activity
+            </button>
+     
+            <button class="flex items-center p-4 bg-[#222222] text-white rounded-full shadow-md transform transition duration-300 hover:scale-110" onclick = "removeSkill()">
+                <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+                Delete Activity
+            </button>
+     
+        </div>
+        <div id="addSkillModal" class="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-10 transform transition-all duration-300 ease-out scale-95 opacity-0 hidden"onclick="outsideClickClose(event)">
+           <div class="bg-white p-8 rounded-lg w-96">
+               <h2 class="text-xl font-semibold mb-4">Slap Skill</h2>
+               
+     
+               <form id ="addSkillForm">
+               <label class="block mb-4">
+                   <span class="text-gray-700">Skill Name:</span>
+                   <input type="text" id = "inputSkillName" class="mt-1 p-2 w-full border rounded-md" placeholder="Enter skill name">
+               </label>
+               
+               <label class="block mb-4">
+                   <span class="text-gray-700">Skill Description:</span>
+                   <textarea id = "inputSkillDescription" class="mt-1 p-2 w-full border rounded-md" placeholder="Enter skill description"></textarea>
+               </label>
+               
+               <button type = "button" class = "px-4 py-2 bg-blue-500 text-white rounded" onclick="addSkill()">Save</button>
+               <button class="px-4 py-2 ml-2 text-gray-500" onclick="toggleModal()">Cancel</button>
+               </form>
+           </div>
+       </div>
+       </div>
+      </div>
+      
+    
+</body>
+</html>

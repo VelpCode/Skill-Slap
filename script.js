@@ -39,8 +39,10 @@ function addSkill() {
         newSkill.className = 'flex-none bg-white p-4 rounded-md shadow mx-4 my- h-50 w-50 ';
         newSkill.innerHTML = `
             <h2 class="font-semibold text-xl mb-2">${skillName}</h2>
-            <p>${skillDescription}</p>
-            <button class="mt-4 px-4 py-2 bg-[#222222] text-white rounded-md">Track Skill</button>
+            <div
+            class="text-neutral-400 text-2xl self-stretch whitespace-nowrap mt-7 max-md:max-w-full"
+          >${skillDescription}</div>
+            <button class="track-button mt-5 px-4 py-3 bg-[#222222] text-white text-base font-bold self-stretch whitespace-nowrap rounded-md transform transition duration-300 hover:scale-110" onclick = "window.location.href ='./track.html';">Track Skill</button>
         `;
 
         // Append the new skill card to the flex container
@@ -59,18 +61,15 @@ function addSkill() {
 }
 
 function removeSkill() {
-
     const skillsContainer = document.querySelector(".skills-container");
 
     if (skillsContainer.children.length > 0) {
         const lastSkill = skillsContainer.lastElementChild;
-
         lastSkill.classList.add('fade-out');
 
-        setTimeout(function() {
+        // Remove the element after the fade-out animation completes
+        lastSkill.addEventListener('animationend', function() {
             skillsContainer.removeChild(lastSkill);
-        }, 500);
+        });
     }
-
-
 }
