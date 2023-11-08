@@ -73,3 +73,31 @@ function removeSkill() {
         });
     }
 }
+
+
+function updateSkillContent() {
+    // Parse the URL to get the query parameters
+    const params = new URLSearchParams(window.location.search);
+    // Get the 'skill' parameter
+    const skill = params.get('skill');
+  
+    // Update the content based on the 'skill' parameter
+    if (skill) {
+      // Find the elements that need updating
+      const skillTitle = document.querySelector('.text-black');
+      const skillProgressTitle = document.querySelector('.text-indigo-500');
+  
+      // Update the text content
+      skillTitle.textContent = skill;
+      skillProgressTitle.textContent = ` ${skill} Progress`;
+    }
+  }
+  
+  // Call the function on page load
+  document.addEventListener('DOMContentLoaded', updateSkillContent);
+
+
+
+
+
+  // 
