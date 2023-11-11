@@ -846,11 +846,6 @@ video {
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
-.bg-blue-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
-}
-
 .bg-indigo-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(99 102 241 / var(--tw-bg-opacity));
@@ -1107,4 +1102,42 @@ video {
     font-size: 2.25rem;
     line-height: 2.5rem;
   }
+}
+
+
+input + label {
+  font-size: 1.2rem;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: .1rem solid var(--blue);
+  border-radius: 50%;
+  background: var(--darkblue);
+  transition: .1s all;
+  cursor: pointer;
+  z-index: 999 !important;
+}
+
+input + label:hover {
+  transform: scale(.95);
+}
+
+input + label:after {
+  content: "🤜";
+}
+
+input:checked + label {
+  background: var(--blue);
+  transform: scale(1.1);
+}
+
+input:checked + label:hover {
+  background: var(--blue);
+  transform: scale(1.05);
+}
+
+input:checked + label:after {
+  content: "👍";
 }

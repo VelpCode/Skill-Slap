@@ -29,9 +29,13 @@ function toggleModal() {
 
 function addActivity() {
     // Prevent the default form submission
-    event.preventDefault();
-
     // Retrieve values from the input fields
+
+    const colors = ['#1abc9c', '#ff7979', '#686de0', '##4834d4', '#6ab04c'];
+
+    // Randomly select a color from the array
+    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+
     const inputSkillName = document.getElementById("inputSkillName").value;
     const inputTask1 = document.getElementById("inputTask1").value;
     const inputTask2 = document.getElementById("inputTask2").value;
@@ -39,20 +43,40 @@ function addActivity() {
 
     // Create a new box element
     const newBox = document.createElement("div");
-    newBox.classList.add("border", "flex", "w-full", "max-w-[337px]", "grow", "flex-col", "mx-auto", "pl-5", "pr-1", "pt-4", "pb-9", "rounded-lg", "border-solid");
-    newBox.style.backgroundColor = "red"; // Replace with your desired color
+    newBox.classList.add("border", "flex", "w-full", "max-w-[337px]", "grow", "flex-col", "mx-auto", "pl-5", "pr-1", "pt-4", "pb-9", "rounded-lg", "border-solid", "max-md:mt-8", "max-md:pl-5");
+    newBox.style.backgroundColor = "#fb7185"; // Replace with your desired color
     newBox.innerHTML = `
         <div class="self-stretch flex w-full items-start justify-between gap-5">
             <div class="text-white text-2xl font-bold my-auto">${inputSkillName}</div>
-            <div><!-- Your image or drag handle --></div>
+            <div id = "drag-one" class = "cursor-pointer">
+                    <img
+                      loading="lazy"
+                      srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/2da32693-6964-4115-84eb-e8e442503a6a?apiKey=fad1b05de9cb407d9fb50765d47dff85&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/2da32693-6964-4115-84eb-e8e442503a6a?apiKey=fad1b05de9cb407d9fb50765d47dff85&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/2da32693-6964-4115-84eb-e8e442503a6a?apiKey=fad1b05de9cb407d9fb50765d47dff85&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/2da32693-6964-4115-84eb-e8e442503a6a?apiKey=fad1b05de9cb407d9fb50765d47dff85&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/2da32693-6964-4115-84eb-e8e442503a6a?apiKey=fad1b05de9cb407d9fb50765d47dff85&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/2da32693-6964-4115-84eb-e8e442503a6a?apiKey=fad1b05de9cb407d9fb50765d47dff85&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/2da32693-6964-4115-84eb-e8e442503a6a?apiKey=fad1b05de9cb407d9fb50765d47dff85&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/2da32693-6964-4115-84eb-e8e442503a6a?apiKey=fad1b05de9cb407d9fb50765d47dff85&"
+                      class="aspect-[1.02] object-contain object-center w-[45px] overflow-hidden self-stretch max-w-full"
+                    />
+                    </div>
+                  </div>
+                  <div
+                    class="self-stretch flex items-start justify-between gap-1.5 mt-4"
+                  >
+                    
         </div>
         <div class="self-stretch flex items-start justify-between gap-1.5 mt-4">
-            <ul class="text-white">
-                <li>${inputTask1}</li>
-                <li>${inputTask2}</li>
-                <li>${inputTask3}</li>
-            </ul>
-        </div>
+        <ul class="text-white">
+        <li>
+            <input type="checkbox" class="mr-2">
+            ${inputTask1}
+        </li>
+        <li>
+            <input type="checkbox" class="mr-2"> 
+            ${inputTask2}
+        </li>
+        <li>
+            <input type="checkbox" class="mr-2">
+            ${inputTask3}
+        </li>
+    </ul>
+</div>
     `;
 
     // Append the new box to the container
