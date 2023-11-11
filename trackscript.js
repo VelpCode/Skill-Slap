@@ -31,7 +31,7 @@ function addActivity() {
     // Prevent the default form submission
     // Retrieve values from the input fields
 
-    const colors = ['#1abc9c', '#ff7979', '#686de0', '##4834d4', '#6ab04c'];
+    const colors = ['#ff7979', '#4834d4', '#686de0', '##4834d4'];
 
     // Randomly select a color from the array
     const randomColor = colors[Math.floor(Math.random() * colors.length)];
@@ -44,7 +44,7 @@ function addActivity() {
     // Create a new box element
     const newBox = document.createElement("div");
     newBox.classList.add("border", "flex", "w-full", "max-w-[337px]", "grow", "flex-col", "mx-auto", "pl-5", "pr-1", "pt-4", "pb-9", "rounded-lg", "border-solid", "max-md:mt-8", "max-md:pl-5");
-    newBox.style.backgroundColor = "#fb7185"; // Replace with your desired color
+    newBox.style.backgroundColor = randomColor; // Replace with your desired color
     newBox.innerHTML = `
         <div class="self-stretch flex w-full items-start justify-between gap-5">
             <div class="text-white text-2xl font-bold my-auto">${inputSkillName}</div>
