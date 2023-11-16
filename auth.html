@@ -11,8 +11,21 @@
     <body class="flex justify-center items-center h-screen bg-gray-100">
         <div class="w-full max-w-md">
             <form class="bg-white shadow-md rounded-lg px-8 pt-6 pb-8 mb-4">
-                <div class = "text-5xl block font-bold text-center">Sign Up.</div>
-                <div class = "bg-red-500 block mt-6 text-center p-4 w-50 rounded-lg text-white font-bold cursor-hover">Sign up with Google.</div>
+                <div class = "text-5xl block font-bold text-center"><span class = "text-indigo-500">Sign</span>Up</div>
+                <div class = "border-b mt-10 shadow-md block text-center p-4 w-50 rounded-3xl text-black font-bold flex items-center justify-center" id = "googleSign">
+                    <img src = "images/Google.png" class = "w-5 h-5 mr-5">
+                    Continue with Google.
+                </div>
+                <div class = "border-b shadow-md block mt-5 text-center p-4 w-50 rounded-3xl text-black font-bold flex items-center justify-center">
+                    <img src = "images/Facebook.png" class = "w-5 h-5 mr-5">
+                    Continue with Facebook.
+                </div>
+                <div class = "block mt-3 text-center p-4 w-50 rounded-lg text-gray-500 font-bold flex items-center justify-center">
+                    Or
+                </div>
+                <div class = "bg-indigo-500 shadow-md block mt-5 text-center p-4 w-50 rounded-full text-white font-bold flex items-center justify-center">
+                    Create Account
+                </div>
             </form>
         </div>
     </body>
@@ -21,7 +34,7 @@
     <script type="module">
         // Import the functions you need from the SDKs you need
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-app.js";
-        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-analytics.js";
+        import { getAuth , googleAuthProvider } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-auth.js";
         // TODO: Add SDKs for Firebase products that you want to use
         // https://firebase.google.com/docs/web/setup#available-libraries
       
@@ -39,7 +52,14 @@
       
         // Initialize Firebase
         const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
+        const auth = getAuth(app);
+        auth.languageCode = 'en';
+        const provider = new googleAuthProvider();
+
+        const googleLogin = document.getElementById("googleSign");
+        googleLogin.addEventListener("click", function() {
+            alert("Wagwan.")
+        })
 
       </script>
 
