@@ -31,10 +31,11 @@ function addActivity() {
     // Prevent the default form submission
     // Retrieve values from the input fields
 
-    const colors = ['#ff7979', '#4834d4', '#686de0', '##4834d4'];
+    const colors = ['#ff7979', '#4834d4', '#7ed6df', '#4834d4'];
 
     // Randomly select a color from the array
     const randomColor = colors[Math.floor(Math.random() * colors.length)];
+    
 
     const inputSkillName = document.getElementById("inputSkillName").value;
     const inputTask1 = document.getElementById("inputTask1").value;
