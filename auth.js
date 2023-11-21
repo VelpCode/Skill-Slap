@@ -20,3 +20,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.6.0/firebas
   const app = initializeApp(firebaseConfig);
   const auth = getAuth(app);
   const provider = new GoogleAuthProvider(app);
+
+
+  const provider = new GoogleAuthProvider(app);
+  const provider = new GoogleAuthProvider(app);
