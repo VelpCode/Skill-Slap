@@ -10,7 +10,7 @@
         <div class="w-full max-w-md">
             <form class="bg-white shadow-md rounded-lg px-8 pt-6 pb-8 mb-4">
                 <div class = "text-5xl block font-bold text-center"><span class = "text-indigo-500">Sign</span>Up</div>
-                <div class = "border-b mt-10 shadow-md block text-center p-4 w-50 rounded-3xl text-black font-bold flex items-center justify-center cursor-pointer" onclick="handleGoogle()">
+                <div class = "border-b mt-10 shadow-md block text-center p-4 w-50 rounded-3xl text-black font-bold flex items-center justify-center cursor-pointer" onclick="handleGoogle()" id = 'login'>
                     <img src = "images/Google.png" class = "w-5 h-5 mr-5">
                     Continue with Google.
                 </div>
@@ -27,6 +27,63 @@
             </form>
         </div>
 
-        <script src = "auth.js"></script>
+        <script type = "module">
+            import { getAuth, GoogleAuthProvider, signInWithRedirect, getRedirectResult, signInWithPopup } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-auth.js";
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-app.js";
+            
+              // TODO: Add SDKs for Firebase products that you want to use
+              // https://firebase.google.com/docs/web/setup#available-libraries
+            
+              // Your web app's Firebase configuration
+              const firebaseConfig = {
+                apiKey: "AIzaSyBposp_sjRUotmYOSDbecKeYeSq-b0SH1o",
+                authDomain: "skillslap-e3176.firebaseapp.com",
+                databaseURL: "https://skillslap-e3176-default-rtdb.firebaseio.com",
+                projectId: "skillslap-e3176",
+                storageBucket: "skillslap-e3176.appspot.com",
+                messagingSenderId: "360614875504",
+                appId: "1:360614875504:web:cdaad7e400f1bde5b1ffb5"
+              };
+            
+              // Initialize Firebase
+              const app = initializeApp(firebaseConfig);
+              const auth = getAuth(app);
+              const provider = new GoogleAuthProvider(app);
+
+              function checkAuthAndRedirect() {
+        const user = auth.currentUser;
+        if (user) {
+            // User is authenticated, redirect to index.html
+            window.location.href = 'index.html';
+        }
+    }
+    
+    // Call the checkAuthAndRedirect function when the page loads
+    window.addEventListener('load', () => {
+        checkAuthAndRedirect();
+    });
+            
+              login.addEventListener('click', (e) => {
+                signInWithPopup(auth, provider)
+  .then((result) => {
+    // This gives you a Google Access Token. You can use it to access the Google API.
+    const credential = GoogleAuthProvider.credentialFromResult(result);
+    const token = credential.accessToken;
+    // The signed-in user info.
+    const user = result.user;
+    // IdP data available using getAdditionalUserInfo(result)    // ...
+  }).catch((error) => {
+    // Handle Errors here.
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    // The email of the user's account used.
+    const email = error.customData.email;
+    // The AuthCredential type that was used.
+    const credential = GoogleAuthProvider.credentialFromError(error);
+    // ...
+  });
+              })
+              
+              </script>
     </body>
     </html>
