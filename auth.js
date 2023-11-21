@@ -1,38 +1,22 @@
-import { initializeApp } from "firebase/app";
-import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-auth.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-app.js";
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: "AIzaSyBeYkzCYfBVv24haaqILzFexmFU6l-Gmt4",
-  authDomain: "skillslap-640dc.firebaseapp.com",
-  projectId: "skillslap-640dc",
-  storageBucket: "skillslap-640dc.appspot.com",
-  messagingSenderId: "1095919272633",
-  appId: "1:1095919272633:web:ab0b0e4d5b9ea2a8215168",
-  measurementId: "G-ZS84R5RBQD"
-};
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-export const auth = getAuth(app)
-export default app;
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyBposp_sjRUotmYOSDbecKeYeSq-b0SH1o",
+    authDomain: "skillslap-e3176.firebaseapp.com",
+    databaseURL: "https://skillslap-e3176-default-rtdb.firebaseio.com",
+    projectId: "skillslap-e3176",
+    storageBucket: "skillslap-e3176.appspot.com",
+    messagingSenderId: "360614875504",
+    appId: "1:360614875504:web:cdaad7e400f1bde5b1ffb5"
+  };
 
-
-const provider = new GoogleAuthProvider()
-
-const signInWithGoogle = () => {
-
-    signInWithPopup(auth, provider).then((result) => {
-
-        console.log(result)
-
-    }).catch((error) => {
-        console.log(error);
-    })
-     
-
-};
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+  const provider = new GoogleAuthProvider(app);
