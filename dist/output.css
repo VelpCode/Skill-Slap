@@ -996,6 +996,14 @@ video {
     margin-top: 2.5rem;
   }
 
+  .max-md\:mt-5 {
+    margin-top: 1.25rem;
+  }
+
+  .max-md\:mt-2 {
+    margin-top: 0.5rem;
+  }
+
   .max-md\:w-full {
     width: 100%;
   }
