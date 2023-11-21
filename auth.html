@@ -51,7 +51,8 @@
               const provider = new GoogleAuthProvider(app);
 
               function checkAuthAndRedirect() {
-        const user = auth.currentUser;
+              const user = auth.currentUser;
+
         if (user) {
             // User is authenticated, redirect to index.html
             window.location.href = 'index.html';
@@ -71,7 +72,9 @@
     const token = credential.accessToken;
     // The signed-in user info.
     const user = result.user;
-    // IdP data available using getAdditionalUserInfo(result)    // ...
+    // IdP data available using getAdditionalUserInfo(result)
+    alert(user.displayName);
+    // ...
   }).catch((error) => {
     // Handle Errors here.
     const errorCode = error.code;
@@ -80,6 +83,8 @@
     const email = error.customData.email;
     // The AuthCredential type that was used.
     const credential = GoogleAuthProvider.credentialFromError(error);
+
+    alert()
     // ...
   });
               })
