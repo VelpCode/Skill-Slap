@@ -32,7 +32,7 @@ function addSkill() {
     const skillName = document.getElementById('inputSkillName').value;
     const skillDescription = document.getElementById('inputSkillDescription').value;
 
-    // Check if the input fields are not empty  
+    // Check if the input fields are not empty
     if (skillName && skillDescription) {
         // Create a new skill card
         const newSkill = document.createElement('div');
